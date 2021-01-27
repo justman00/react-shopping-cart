@@ -4,6 +4,7 @@ import React from 'react';
 import Item from './ShoppingCartItem';
 
 const ShoppingCart = props => {
+	console.log('sunt in functia ShoppingCart: ',props.cart)
 	const getCartTotal = () => {
 		return props.cart.reduce((acc, value) => {
 			return acc + value.price;
@@ -13,7 +14,7 @@ const ShoppingCart = props => {
 	return (
 		<div className="shopping-cart">
 			{props.cart.map(item => (
-				<Item key={item.id} {...item} />
+				<Item key={item.id} item = {item} />
 			))}
 
 			<div className="shopping-cart__checkout">

@@ -13,7 +13,9 @@ function App() {
 
 	const addItem = item => {
 		// add the given item to the cart
+		setCart(prevCart => [...prevCart, item])
 	};
+console.log('cartApp: ',cart)
 
 	return (
 		<div className="App">
